@@ -1,0 +1,18 @@
+{
+  "name": "chrome-extension-toolkit",
+  "version": "1.0.1",
+  "description": "Tools to make chrome extension development easier",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "devDependencies": {
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "jest": "^22.4.3"
+  }
+}
