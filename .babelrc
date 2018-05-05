@@ -1,15 +1,17 @@
 {
   "plugins": ["syntax-dynamic-import", "transform-runtime"],
   "presets": [
-    "babel-preset-es2015",
-    "babel-preset-stage-0"
+    "es2015",
+    "stage-0"
   ],
   "env": {
     "test": {
       "presets": [
-        "babel-preset-es2015",
-        "babel-preset-stage-0"
+        "es2015",
+        "stage-0"
       ]
     }
-  }
+  },
+  "sourceMaps": true,
+  "retainLines": true
 }
