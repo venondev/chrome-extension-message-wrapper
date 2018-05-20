@@ -91,6 +91,11 @@ const nested = () => {
   return "Inside a nested object";
 };
 
+// Every function automaticaly gets passed the request ({ request, sender }) as the last argument.
+const removeTab = request => {
+  chrome.tabs.remove(request.sender.id);
+};
+
 const backgroundFunctions = {
   // Responds with return value
   syncCall,
