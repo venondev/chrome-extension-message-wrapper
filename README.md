@@ -1,8 +1,8 @@
-# Chrome Extension Toolkit
+# Chrome Extension Message Wrapper
 
-## What is the Chrome Extension Toolkit?
+## What is the Chrome Extension Message Wrapper?
 
-The Chrome Extension Toolkit is a package which should make developing Chrome Extensions easier, by providing a wrapper for the message passing api.
+The Chrome Extension Message Wrapper is a package which should make developing Chrome Extensions easier, by providing a wrapper for the message passing api.
 
 I often found myself using some really verbose switch statements on the background script, just to trigger simple functions. I also had a problem with the callback-based response style. Therefore, I wrote a simple wrapper which allows you to define an object of functions in the background script, which you can call with exactly the same arguments in the content / popup script and will return a promise with the result of the function.
 
@@ -66,12 +66,12 @@ To be called on the background script.
 
 **Params:**
 
-* `Object` backgroundFunctions: Functions which will be accessable from the background script. ( Can be a nested object )
-* `Object` options: Configure the listener to do logging or use a custom message handler.
+- `Object` backgroundFunctions: Functions which will be accessable from the background script. ( Can be a nested object )
+- `Object` options: Configure the listener to do logging or use a custom message handler.
 
 **Returns:**
 
-* `Function`: Takes `request`, `sender`, `sendResponse` as params. Should be passend to chrome.runtime.onMessage.addListener
+- `Function`: Takes `request`, `sender`, `sendResponse` as params. Should be passend to chrome.runtime.onMessage.addListener
 
 **Usage**
 
@@ -134,11 +134,11 @@ To be called on the content / popup script
 
 **Params**
 
-* `Object` chrome: Chrome instance
+- `Object` chrome: Chrome instance
 
 **Returns**
 
-* `Promise` bgFunctions: Object of all background functions which were passed to setupMessageListener + default sendMessage().
+- `Promise` bgFunctions: Object of all background functions which were passed to setupMessageListener + default sendMessage().
 
 **Usage**
 
@@ -171,10 +171,7 @@ I will keep track of the todos on the issue page.
 
 ## Small note on another project
 
-I am currently working on another package, called `create-chrome-extension` inspired by `create-react-app`, which should take care of creating, bundeling and releasing a chrome extension. If you are interested please visit the link below or take a look at my repos.
-
-**Important**
-Currently `create-chrome-extension` is still under development and at the moment the only feature is to run a dev server and babel your code.
+I am currently working on another package, called `chrome-extension-toolkit` inspired by `create-react-app`, which should take care of creating, bundeling and releasing a chrome extension. If you are interested please visit the link below or take a look at my repos.
 
 [create-chrome-extension](https://github.com/venondev/create-chrome-extension)
 

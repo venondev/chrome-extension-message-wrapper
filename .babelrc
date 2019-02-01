@@ -1,14 +1,12 @@
 {
-  "plugins": ["syntax-dynamic-import", "transform-runtime"],
+  "plugins": ["@babel/plugin-transform-runtime", "@babel/plugin-syntax-dynamic-import", ],
   "presets": [
-    "es2015",
-    "stage-0"
+    "@babel/preset-env",
   ],
   "env": {
     "test": {
       "presets": [
-        "es2015",
-        "stage-0"
+        "@babel/preset-env",
       ]
     }
   },
