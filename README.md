@@ -12,16 +12,14 @@ I plan to extend this package in the future.
 
 ## How to install
 
-Currently the package is only available on github, but will be up on npm soon.
-
-To install follow the two steps
-
 ```
-git clone https://github.com/venondev/chrome-extension-toolkit.git
+  npm i chrome-extension-message-wrapper
 ```
 
+or...
+
 ```
-npm install --save ./path_to_package_folder/chrome-extension-toolkit
+  yarn add chrome-extension-message-wrapper
 ```
 
 ## How to use
@@ -31,7 +29,7 @@ To make the wrapper work, you have to call two functions.
 On the background script:
 
 ```javascript
-import { setupMessageListener } from "chrome-extension-toolkit";
+import { setupMessageListener } from "chrome-extension-message-wrapper";
 
 const someFunction = name => {
   return `Hey ${name}, whats up?`;
@@ -47,7 +45,7 @@ chrome.runtime.onMessage.addListener(
 On the content / popup script:
 
 ```javascript
-import { initBGFunctions } from "chrome-extension-toolkit";
+import { initBGFunctions } from "chrome-extension-message-wrapper";
 
 initBGFunctions(chrome).then(backgroundFunctions => {
   const { someFunction } = backgroundFunctions;
@@ -76,7 +74,7 @@ To be called on the background script.
 **Usage**
 
 ```javascript
-import { setupMessageListener } from "chrome-extension-toolkit";
+import { setupMessageListener } from "chrome-extension-message-wrapper";
 import axios from "axios";
 
 const syncCall = name => {
@@ -143,7 +141,7 @@ To be called on the content / popup script
 **Usage**
 
 ```javascript
-import { initBGFunctions } from "chrome-extension-toolkit";
+import { initBGFunctions } from "chrome-extension-message-wrapper";
 
 // Using the functions from the setupMessageListener example
 initBGFunctions(chrome).then(async bgFuncs => {
@@ -168,12 +166,6 @@ initBGFunctions(chrome).then(async bgFuncs => {
 If you find a bug or have an idea for a new feature feel free to open a new issue or create a new pull request.
 
 I will keep track of the todos on the issue page.
-
-## Small note on another project
-
-I am currently working on another package, called `chrome-extension-toolkit` inspired by `create-react-app`, which should take care of creating, bundeling and releasing a chrome extension. If you are interested please visit the link below or take a look at my repos.
-
-[create-chrome-extension](https://github.com/venondev/create-chrome-extension)
 
 ## License
 
