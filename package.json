@@ -1,6 +1,6 @@
 {
   "name": "chrome-extension-message-wrapper",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Wrapper for chrome extension message passing",
   "author": {
     "name": "venondev",
